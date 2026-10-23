@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Triatlón — Santiago</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+body{background:#0f172a;color:#e2e8f0;font-family:'Segoe UI',system-ui,sans-serif;margin:0;padding:16px}
+h1{font-size:1.3rem;margin:4px 0 2px} .sub{color:#94a3b8;font-size:.85rem;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.card{background:#1e293b;border-radius:12px;padding:14px;text-align:center}
+.card .v{font-size:1.7rem;font-weight:700} .card .l{color:#94a3b8;font-size:.75rem;margin-top:2px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-bottom:16px}
+.chart{background:#1e293b;border-radius:12px;padding:12px}
+table{width:100%;border-collapse:collapse;background:#1e293b;border-radius:12px;overflow:hidden;font-size:.82rem}
+th,td{padding:7px 9px;text-align:left} th{background:#334155;color:#cbd5e1}
+tr:nth-child(even){background:#263449}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.race{background:#312e81;border-radius:10px;padding:10px 14px;font-size:.85rem}
+.race b{color:#a5b4fc}
+</style></head><body>
+<h1>🏊🚴🏃 Dashboard Triatlón — Santiago</h1>
+<div class="sub">Actualizado: 23 Oct 2026 · 08:15</div>
+<div class="meta">
+<div class="race">🎯 <b>Adidas Splits 28K</b> — faltan 16 días</div>
+<div class="race">🏁 <b>Media Andina Chía</b> — faltan 44 días</div>
+</div>
+<div class="grid">
+<div class="card"><div class="v" style="color:#facc15">55</div><div class="l">Readiness · MODERATE</div></div>
+<div class="card"><div class="v" style="color:#facc15">87<span style="font-size:.9rem">ms</span></div><div class="l">HRV anoche · UNBALANCED (65 sem)</div></div>
+<div class="card"><div class="v">40</div><div class="l">FC reposo hoy</div></div>
+<div class="card"><div class="v">97</div><div class="l">Body Battery máx hoy</div></div>
+<div class="card"><div class="v">926</div><div class="l">Carga 7 días</div></div>
+<div class="card"><div class="v">72k · 176k · 5.6k</div><div class="l">Run · Bici · Nado (14d)</div></div>
+</div>
+<div class="charts">
+<div class="chart"><canvas id="bb"></canvas></div>
+<div class="chart"><canvas id="sl"></canvas></div>
+<div class="chart"><canvas id="st"></canvas></div>
+<div class="chart"><canvas id="hr"></canvas></div>
+</div>
+<table><thead><tr><th>Fecha</th><th>Actividad</th><th>Dist</th><th>Tiempo</th><th>Ritmo/Vel</th><th>FC</th><th>Carga</th></tr></thead>
+<tbody><tr><td>10-23 06:43</td><td>🚴 Bogota, D.C. Cycling</td><td>14.79 km</td><td>55 min</td><td>16.1 km/h</td><td>129/166</td><td>61</td></tr>
+<tr><td>10-22 05:07</td><td>🏃 Bogota, D.C. Running</td><td>24.01 km</td><td>131 min</td><td>5:27/km</td><td>144/161</td><td>192</td></tr>
+<tr><td>10-19 15:31</td><td>🚴 Bogota, D.C. Cycling</td><td>13.67 km</td><td>57 min</td><td>14.3 km/h</td><td>104/161</td><td>14</td></tr>
+<tr><td>10-19 11:31</td><td>🏃 Bogota, D.C. - Run pace workout</td><td>12.52 km</td><td>69 min</td><td>5:28/km</td><td>148/161</td><td>139</td></tr>
+<tr><td>10-18 07:08</td><td>🚴 Bogota, D.C. Cycling</td><td>8.87 km</td><td>27 min</td><td>19.7 km/h</td><td>123/148</td><td>19</td></tr>
+<tr><td>10-18 05:21</td><td>🏊 Pool Swim</td><td>2.15 km</td><td>85 min</td><td>2:23/100m</td><td>130/162</td><td>86</td></tr>
+<tr><td>10-18 04:42</td><td>🚴 Bogota, D.C. Cycling</td><td>8.7 km</td><td>27 min</td><td>19.4 km/h</td><td>127/141</td><td>22</td></tr>
+<tr><td>10-17 09:39</td><td>🚴 Bogota, D.C. Cycling</td><td>8.5 km</td><td>22 min</td><td>23.6 km/h</td><td>134/155</td><td>39</td></tr>
+<tr><td>10-17 07:44</td><td>🚴 Bogota, D.C. Cycling</td><td>52.59 km</td><td>96 min</td><td>32.7 km/h</td><td>145/169</td><td>152</td></tr>
+<tr><td>10-17 05:35</td><td>🌊 Bogota, D.C. Open Water Swimming</td><td>1.2 km</td><td>60 min</td><td>4:58/100m</td><td>147/163</td><td>137</td></tr>
+<tr><td>10-17 05:18</td><td>🏊 Pool Swim</td><td>0.53 km</td><td>16 min</td><td>2:27/100m</td><td>123/156</td><td>33</td></tr>
+<tr><td>10-17 04:27</td><td>🚴 Bogota, D.C. Cycling</td><td>8.51 km</td><td>20 min</td><td>25.4 km/h</td><td>133/153</td><td>32</td></tr>
+<tr><td>10-16 05:42</td><td>🏃 Bogota, D.C. Running</td><td>21.02 km</td><td>123 min</td><td>5:49/km</td><td>139/150</td><td>133</td></tr>
+<tr><td>10-15 05:26</td><td>🚴 Bogota, D.C. Cycling</td><td>60.4 km</td><td>120 min</td><td>30.2 km/h</td><td>141/167</td><td>140</td></tr>
+<tr><td>10-12 05:47</td><td>🏃 Ricaurte - Run pace workout</td><td>14.01 km</td><td>77 min</td><td>5:31/km</td><td>144/156</td><td>126</td></tr>
+<tr><td>10-11 08:43</td><td>🏊🚴🏃 Ricaurte Multisport</td><td>7.1 km</td><td>58 min</td><td>7.3 km/h</td><td>0/173</td><td>206</td></tr>
+<tr><td>10-11 08:23</td><td>🏊 Pool Swim</td><td>0.5 km</td><td>18 min</td><td>2:29/100m</td><td>128/163</td><td>48</td></tr>
+<tr><td>10-10 18:16</td><td>🔹 Ricaurte Tennis</td><td>1.31 km</td><td>40 min</td><td>2.0 km/h</td><td>106/202</td><td>31</td></tr>
+<tr><td>10-10 11:10</td><td>🏊 Pool Swim</td><td>1.18 km</td><td>45 min</td><td>2:14/100m</td><td>128/163</td><td>89</td></tr></tbody></table>
+<script>
+const L=["10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct"];
+const opts=(t)=>({responsive:true,plugins:{title:{display:true,text:t,color:'#cbd5e1'},legend:{display:false}},scales:{x:{ticks:{color:'#64748b'},grid:{color:'#1e293b'}},y:{ticks:{color:'#64748b'},grid:{color:'#334155'}}}});
+new Chart(bb,{type:'line',data:{labels:L,datasets:[{data:[90, 96, 86, 75, 58, 99, 100, 86, 73, 79, 95, 100, 99, 97],borderColor:'#38bdf8',backgroundColor:'#38bdf833',fill:true,tension:.35}]},options:opts('🔋 Body Battery máx')});
+new Chart(sl,{type:'bar',data:{labels:L,datasets:[{data:[6.6, 8.7, 6.7, 7.1, 9.4, 7.7, 6.4, 6.5, 5.4, 8.3, 9.2, 8.6, 5.7, 5.7],backgroundColor:'#a78bfa'}]},options:opts('😴 Sueño (horas)')});
+new Chart(st,{type:'line',data:{labels:L,datasets:[{data:[20, 23, 26, 35, 28, 24, 23, 27, 23, 21, 19, 25, 23, 8],borderColor:'#fb923c',tension:.35}]},options:opts('⚡ Estrés promedio')});
+new Chart(hr,{type:'line',data:{labels:L,datasets:[{data:[41, 39, 42, 46, 46, 41, 41, 43, 43, 43, 43, 43, 41, 40],borderColor:'#f87171',tension:.35}]},options:opts('❤️ FC reposo')});
+</script></body></html>
