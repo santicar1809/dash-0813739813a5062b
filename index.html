@@ -19,7 +19,7 @@ tr:nth-child(even){background:#263449}
 .race b{color:#a5b4fc}
 </style></head><body>
 <h1>🏊🚴🏃 Dashboard Triatlón — Santiago</h1>
-<div class="sub">Actualizado: 23 Oct 2026 · 08:15</div>
+<div class="sub">Actualizado: 23 Oct 2026 · 10:13</div>
 <div class="meta">
 <div class="race">🎯 <b>Adidas Splits 28K</b> — faltan 16 días</div>
 <div class="race">🏁 <b>Media Andina Chía</b> — faltan 44 días</div>
@@ -63,6 +63,6 @@ const L=["10 Oct", "11 Oct", "12 Oct", "13 Oct", "14 Oct", "15 Oct", "16 Oct", "
 const opts=(t)=>({responsive:true,plugins:{title:{display:true,text:t,color:'#cbd5e1'},legend:{display:false}},scales:{x:{ticks:{color:'#64748b'},grid:{color:'#1e293b'}},y:{ticks:{color:'#64748b'},grid:{color:'#334155'}}}});
 new Chart(bb,{type:'line',data:{labels:L,datasets:[{data:[90, 96, 86, 75, 58, 99, 100, 86, 73, 79, 95, 100, 99, 97],borderColor:'#38bdf8',backgroundColor:'#38bdf833',fill:true,tension:.35}]},options:opts('🔋 Body Battery máx')});
 new Chart(sl,{type:'bar',data:{labels:L,datasets:[{data:[6.6, 8.7, 6.7, 7.1, 9.4, 7.7, 6.4, 6.5, 5.4, 8.3, 9.2, 8.6, 5.7, 5.7],backgroundColor:'#a78bfa'}]},options:opts('😴 Sueño (horas)')});
-new Chart(st,{type:'line',data:{labels:L,datasets:[{data:[20, 23, 26, 35, 28, 24, 23, 27, 23, 21, 19, 25, 23, 8],borderColor:'#fb923c',tension:.35}]},options:opts('⚡ Estrés promedio')});
+new Chart(st,{type:'line',data:{labels:L,datasets:[{data:[20, 23, 26, 35, 28, 24, 23, 27, 23, 21, 19, 25, 23, 12],borderColor:'#fb923c',tension:.35}]},options:opts('⚡ Estrés promedio')});
 new Chart(hr,{type:'line',data:{labels:L,datasets:[{data:[41, 39, 42, 46, 46, 41, 41, 43, 43, 43, 43, 43, 41, 40],borderColor:'#f87171',tension:.35}]},options:opts('❤️ FC reposo')});
 </script></body></html>
