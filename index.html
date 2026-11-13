@@ -24,7 +24,7 @@ tr:nth-child(even){background:#263449} tr.hoy{background:#1e3a8a55;outline:2px s
 .small{color:#94a3b8;font-size:.72rem}
 </style></head><body>
 <h1>🧢 Coach Pedrinchi — Santiago</h1>
-<div class="sub">Actualizado: Fri 13 Nov 2026 · 05:05</div>
+<div class="sub">Actualizado: Fri 13 Nov 2026 · 08:07</div>
 <div class="coach">
 <div class="fase">Plan Triatlón 2026–2027</div>
 <div class="sesion">HOY · 🚶🏃 **Cambio (12 nov): caminata o trote suave con Ana** en vez de bici Z2 · 45–60min · FC < 140</div>
@@ -36,12 +36,12 @@ tr:nth-child(even){background:#263449} tr.hoy{background:#1e3a8a55;outline:2px s
 <div class="race">🌊 <b>5150 Cartagena</b> · 296d</div>
 </div>
 <div class="grid">
-<div class="card"><div class="v" style="color:#4ade80">75</div><div class="l">READINESS · HIGH</div></div>
-<div class="card"><div class="v" style="color:#facc15">None</div><div class="l">HRV ms · None (sem None)</div></div>
+<div class="card"><div class="v" style="color:#4ade80">82</div><div class="l">READINESS · HIGH</div></div>
+<div class="card"><div class="v" style="color:#4ade80">74</div><div class="l">HRV ms · BALANCED (sem 71)</div></div>
 <div class="card"><div class="v">52.5</div><div class="l">VO2MAX</div></div>
-<div class="card"><div class="v">47</div><div class="l">FC REPOSO</div></div>
+<div class="card"><div class="v">43</div><div class="l">FC REPOSO</div></div>
 <div class="card"><div class="v" style="color:#facc15">0.77</div><div class="l">CARGA AGUDA/CRÓNICA (495/643)</div></div>
-<div class="card"><div class="v">—h</div><div class="l">SUEÑO ANOCHE</div></div>
+<div class="card"><div class="v">7.2h</div><div class="l">SUEÑO ANOCHE</div></div>
 </div>
 <h2>📋 Semana vigente del plan</h2>
 <table><thead><tr><th>Día</th><th>Sesión</th><th>✅</th><th>Datos reales</th></tr></thead><tbody><tr class=''><td>Lun 9</td><td>😴 Descanso total — carga 400pts y TE 5.0 OVERREACHING de ayer</td><td>✅</td><td class='small'>Sin entreno estructurado · solo 🚴 bici transporte 7.21km · 31.5min · 13.7km/h · +37m · FC **99/143** · 158 kcal · solo **8.2pts** de carga</td></tr>
@@ -81,5 +81,5 @@ const t=(s)=>({...base,plugins:{...base.plugins,title:{display:true,text:s,color
 new Chart(cg,{type:'bar',data:{labels:["31/10", "01/11", "02/11", "03/11", "04/11", "05/11", "06/11", "07/11", "08/11", "09/11", "10/11", "11/11", "12/11", "13/11"],datasets:[{label:'Carga',data:[158, 126, 5, 0, 116, 0, 3, 0, 401, 8, 0, 0, 86, 0],backgroundColor:'#38bdf8'}]},options:t('💪 Carga de entrenamiento diaria (14d)')});
 new Chart(rp,{type:'line',data:{labels:["10-19 (13k)", "10-22 (24k)", "10-27 (8k)", "10-28 (12k)", "11-04 (9k)", "11-08 (27k)", "11-12 (8k)"],datasets:[{label:'Ritmo (seg/km)',data:[329.0, 328.0, 331.0, 351.0, 342.0, 296.0, 359.0],borderColor:'#4ade80',yAxisID:'y',tension:.3},{label:'FC prom',data:[148.0, 144.0, 141.0, 138.0, 148.0, 165.0, 145.0],borderColor:'#f87171',yAxisID:'y1',tension:.3}]},options:{...t('🏃 Runs ≥5km: ritmo vs FC (28d)'),scales:{...base.scales,y:{reverse:true,ticks:{color:'#4ade80',callback:(v)=>Math.floor(v/60)+':'+String(Math.round(v%60)).padStart(2,'0')}},y1:{position:'right',ticks:{color:'#f87171'},grid:{display:false}}}}});
 new Chart(vol,{type:'bar',data:{labels:["17/10\u201323/10", "24/10\u201330/10", "31/10\u201306/11", "07/11\u201313/11"],datasets:[{label:'Run km',data:[36.5, 20.5, 8.8, 35.4],backgroundColor:'#4ade80'},{label:'Bici km',data:[115.6, 135.0, 41.6, 7.2],backgroundColor:'#38bdf8'},{label:'Nado m×10⁻²',data:[38.8, 62.8, 61.6, 0.0],backgroundColor:'#a78bfa'}]},options:t('📊 Volumen semanal por disciplina (4 sem)')});
-new Chart(rec,{type:'line',data:{labels:["31/10", "01/11", "02/11", "03/11", "04/11", "05/11", "06/11", "07/11", "08/11", "09/11", "10/11", "11/11", "12/11", "13/11"],datasets:[{label:'Body Battery',data:[80, 64, 70, 81, 98, 100, 100, 92, 93, 83, 89, 98, 100, 55],borderColor:'#38bdf8',tension:.3},{label:'Sueño h×10',data:[44, 53, 87, 77, 77, 87, 55, 90, 52, 76, 65, 102, 58, null],borderColor:'#a78bfa',tension:.3},{label:'FC reposo',data:[45, 44, 44, 42, 44, 44, 43, 41, 43, 45, 42, 42, 42, 47],borderColor:'#f87171',tension:.3}]},options:t('🔋 Recuperación (14d)')});
+new Chart(rec,{type:'line',data:{labels:["31/10", "01/11", "02/11", "03/11", "04/11", "05/11", "06/11", "07/11", "08/11", "09/11", "10/11", "11/11", "12/11", "13/11"],datasets:[{label:'Body Battery',data:[80, 64, 70, 81, 98, 100, 100, 92, 93, 83, 89, 98, 100, 100],borderColor:'#38bdf8',tension:.3},{label:'Sueño h×10',data:[44, 53, 87, 77, 77, 87, 55, 90, 52, 76, 65, 102, 78, 72],borderColor:'#a78bfa',tension:.3},{label:'FC reposo',data:[45, 44, 44, 42, 44, 44, 43, 41, 43, 45, 42, 42, 42, 43],borderColor:'#f87171',tension:.3}]},options:t('🔋 Recuperación (14d)')});
 </script></body></html>
